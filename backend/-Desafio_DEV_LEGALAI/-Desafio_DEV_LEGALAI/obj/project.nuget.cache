@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "uLCc98lkExo=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kiko-\\Desktop\\Desafio_legal\\-Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\\backend\\-Desafio_DEV_LEGALAI\\-Desafio_DEV_LEGALAI\\-Desafio_DEV_LEGALAI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kiko-\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.4\\microsoft.aspnetcore.openapi.9.0.4.nupkg.sha512",
+    "C:\\Users\\kiko-\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}

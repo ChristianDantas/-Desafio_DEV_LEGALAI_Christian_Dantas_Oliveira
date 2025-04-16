@@ -1,0 +1,6 @@
+@_Desafio_DEV_LEGALAI_HostAddress = http://localhost:5237
+
+GET {{_Desafio_DEV_LEGALAI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
