@@ -1,4 +1,5 @@
 --Create database Desafio_Legal
+GO
 
 USE Desafio_Legal
 GO
@@ -20,7 +21,7 @@ Create Table Questionario(
 GO
 --Tabela de Respostas
 Create Table Respostas(
-		idResposta INT PRIMARY KEY IDENTITY
+		idResposta INT PRIMARY KEY IDENTITY 
 		,idQuestionario INT FOREIGN KEY REFERENCES Questionario(idQuestionario)
 		,Questao VARCHAR(255)
 		,Resposta1 VARCHAR(255)
@@ -28,5 +29,4 @@ Create Table Respostas(
 		,Resultado BIT
 )
 GO
-
 
