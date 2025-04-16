@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\kiko-\\Desktop\\Desafio_legal\\-Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\\backend\\-Desafio_DEV_LEGALAI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E4E8E31B-4975-499F-9111-A9BFB6643466}|-Desafio_DEV_LEGALAI\\-Desafio_DEV_LEGALAI.csproj|c:\\users\\kiko-\\desktop\\desafio_legal\\-desafio_dev_legalai_christian_dantas_oliveira\\backend\\-desafio_dev_legalai\\-desafio_dev_legalai\\-desafio_dev_legalai.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{E4E8E31B-4975-499F-9111-A9BFB6643466}|-Desafio_DEV_LEGALAI\\-Desafio_DEV_LEGALAI.csproj|solutionrelative:-desafio_dev_legalai\\-desafio_dev_legalai.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{E4E8E31B-4975-499F-9111-A9BFB6643466}|-Desafio_DEV_LEGALAI\\-Desafio_DEV_LEGALAI.csproj|c:\\users\\kiko-\\desktop\\desafio_legal\\-desafio_dev_legalai_christian_dantas_oliveira\\backend\\-desafio_dev_legalai\\-desafio_dev_legalai\\domains\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4E8E31B-4975-499F-9111-A9BFB6643466}|-Desafio_DEV_LEGALAI\\-Desafio_DEV_LEGALAI.csproj|solutionrelative:-desafio_dev_legalai\\domains\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4E8E31B-4975-499F-9111-A9BFB6643466}|-Desafio_DEV_LEGALAI\\-Desafio_DEV_LEGALAI.csproj|c:\\users\\kiko-\\desktop\\desafio_legal\\-desafio_dev_legalai_christian_dantas_oliveira\\backend\\-desafio_dev_legalai\\-desafio_dev_legalai\\domains\\questionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4E8E31B-4975-499F-9111-A9BFB6643466}|-Desafio_DEV_LEGALAI\\-Desafio_DEV_LEGALAI.csproj|solutionrelative:-desafio_dev_legalai\\domains\\questionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E4E8E31B-4975-499F-9111-A9BFB6643466}|-Desafio_DEV_LEGALAI\\-Desafio_DEV_LEGALAI.csproj|c:\\users\\kiko-\\desktop\\desafio_legal\\-desafio_dev_legalai_christian_dantas_oliveira\\backend\\-desafio_dev_legalai\\-desafio_dev_legalai\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,24 +26,41 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "-Desafio_DEV_LEGALAI",
-              "DocumentMoniker": "C:\\Users\\kiko-\\Desktop\\Desafio_legal\\-Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\\backend\\-Desafio_DEV_LEGALAI\\-Desafio_DEV_LEGALAI\\-Desafio_DEV_LEGALAI.csproj",
-              "RelativeDocumentMoniker": "-Desafio_DEV_LEGALAI\\-Desafio_DEV_LEGALAI.csproj",
-              "ToolTip": "C:\\Users\\kiko-\\Desktop\\Desafio_legal\\-Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\\backend\\-Desafio_DEV_LEGALAI\\-Desafio_DEV_LEGALAI\\-Desafio_DEV_LEGALAI.csproj",
-              "RelativeToolTip": "-Desafio_DEV_LEGALAI\\-Desafio_DEV_LEGALAI.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-16T03:47:54.746Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Questionario.cs",
+              "DocumentMoniker": "C:\\Users\\kiko-\\Desktop\\Desafio_legal\\-Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\\backend\\-Desafio_DEV_LEGALAI\\-Desafio_DEV_LEGALAI\\Domains\\Questionario.cs",
+              "RelativeDocumentMoniker": "-Desafio_DEV_LEGALAI\\Domains\\Questionario.cs",
+              "ToolTip": "C:\\Users\\kiko-\\Desktop\\Desafio_legal\\-Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\\backend\\-Desafio_DEV_LEGALAI\\-Desafio_DEV_LEGALAI\\Domains\\Questionario.cs",
+              "RelativeToolTip": "-Desafio_DEV_LEGALAI\\Domains\\Questionario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T04:06:25.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\kiko-\\Desktop\\Desafio_legal\\-Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\\backend\\-Desafio_DEV_LEGALAI\\-Desafio_DEV_LEGALAI\\Domains\\Usuario.cs",
+              "RelativeDocumentMoniker": "-Desafio_DEV_LEGALAI\\Domains\\Usuario.cs",
+              "ToolTip": "C:\\Users\\kiko-\\Desktop\\Desafio_legal\\-Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\\backend\\-Desafio_DEV_LEGALAI\\-Desafio_DEV_LEGALAI\\Domains\\Usuario.cs",
+              "RelativeToolTip": "-Desafio_DEV_LEGALAI\\Domains\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T04:01:31.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\kiko-\\Desktop\\Desafio_legal\\-Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\\backend\\-Desafio_DEV_LEGALAI\\-Desafio_DEV_LEGALAI\\Program.cs",
               "RelativeDocumentMoniker": "-Desafio_DEV_LEGALAI\\Program.cs",
@@ -52,7 +73,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\kiko-\\Desktop\\Desafio_legal\\-Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\\backend\\-Desafio_DEV_LEGALAI\\-Desafio_DEV_LEGALAI\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "-Desafio_DEV_LEGALAI\\Properties\\launchSettings.json",
@@ -60,12 +81,7 @@
               "RelativeToolTip": "-Desafio_DEV_LEGALAI\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-16T03:46:44.354Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+              "WhenOpened": "2025-04-16T03:46:44.354Z"
             }
           ]
         }
