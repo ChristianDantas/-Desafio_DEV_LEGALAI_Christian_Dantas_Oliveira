@@ -8,5 +8,21 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "_Desafio_DEV_LEGALAI.Controllers.InteressesController",
+    "Method": "Post",
+    "RelativePath": "api/Interesses",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "novoInteresse",
+        "Type": "_Desafio_DEV_LEGALAI.Domains.InteresseDomain",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

@@ -20,12 +20,22 @@ namespace _Desafio_DEV_LEGALAI.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-           List<InteresseDomain> listaInteresse = _interesseRepository.ListarInteresse();
+            List<InteresseDomain> listaInteresse = _interesseRepository.ListarInteresse();
             if (listaInteresse == null)
             {
                 return NotFound("Nenhum interesse encontrado");
             }
             return Ok(listaInteresse);
+        }
+        [HttpPost]
+        public IActionResult Post(InteresseDomain novoInteresse)
+        {
+            if (novoInteresse.nomeInteresse == null)
+            {
+                return BadRequest("Nome do interesse não pode ser vazio");
+            }
+            _interesseRepository.Cadastrar(novoInteresse);
+            return StatusCode(201);
         }
     }
 }

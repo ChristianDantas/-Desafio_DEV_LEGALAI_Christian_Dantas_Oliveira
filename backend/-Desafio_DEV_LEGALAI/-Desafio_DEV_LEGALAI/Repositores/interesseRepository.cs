@@ -17,19 +17,20 @@ namespace _Desafio_DEV_LEGALAI.Repositores
         /// </summary>
         private string stringConexao = "Data Source=DESKTOP-P4LGFHE;initial catalog=Desafio_Legal;integrated security=true";
 
-        public InteresseDomain BuscarPorId(int id)
-        {
-            throw new NotImplementedException();
-        }
+
 
         public void Cadastrar(InteresseDomain novoInteresse)
         {
-            throw new NotImplementedException();
-        }
-
-        public void Deletar(int id)
-        {
-            throw new NotImplementedException();
+            using (SqlConnection con = new(stringConexao))
+            {
+                string queryInsert = "INSERT INTO Interesse (nomeInteresse) VALUES (@Nome)";
+                using (SqlCommand cmd = new(queryInsert, con))
+                {
+                    cmd.Parameters.AddWithValue("@nomeInteresse", novoInteresse.nomeInteresse);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                }
+            }
         }
 
         public List<InteresseDomain> ListarInteresse()

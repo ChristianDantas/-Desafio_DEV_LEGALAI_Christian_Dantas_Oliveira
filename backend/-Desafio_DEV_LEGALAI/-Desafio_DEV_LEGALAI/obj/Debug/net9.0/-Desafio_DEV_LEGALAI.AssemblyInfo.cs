@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("-Desafio_DEV_LEGALAI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b54cc0037356e30c61e2d0c23d79a8c2cf91667e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f94d727f214d06034e3b1a8858f1c41e4d6ecd90")]
 [assembly: System.Reflection.AssemblyProductAttribute("-Desafio_DEV_LEGALAI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("-Desafio_DEV_LEGALAI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
