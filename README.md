@@ -68,4 +68,3 @@ Este projeto consiste em um sistema desenvolvido com **ASP.NET** e **ASP.NET Cor
 
 Agradeço pela atenção e espero que essa experiência seja enriquecedora. Se algo não estiver totalmente claro ou se surgirem dúvidas, por favor, sinta-se à vontade para entrar em contato!
 ```
-
