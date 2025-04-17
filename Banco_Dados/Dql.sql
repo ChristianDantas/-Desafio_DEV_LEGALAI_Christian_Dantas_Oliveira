@@ -1,5 +1,5 @@
 use Desafio_Legal
 
+SELECT * FROM Interesse
 SELECT * FROM Usuario
-SELECT * FROM Questionario
-SELECT * FROM Respostas
+SELECT * FROM Empresas
