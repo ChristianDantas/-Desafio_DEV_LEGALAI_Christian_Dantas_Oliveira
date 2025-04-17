@@ -1,58 +1,71 @@
-# README - Instruções para Configuração e Execução do Projeto
+Segue abaixo um exemplo de **README.md** contendo as instruções pedidas:
 
-## Introdução
-Este documento fornece instruções detalhadas para configurar e executar o projeto "Desafio DEV LEGALAI". O projeto é desenvolvido em ASP.NET e ASP.NET Core, e utiliza um banco de dados SQL Server.
+---
 
-## Pré-requisitos
-Antes de começar, certifique-se de ter o seguinte instalado em sua máquina:
-- SQL Server (Versão compatível com o projeto)
-- Visual Studio com suporte para .NET (ou Visual Studio Code com C# e .NET Core SDK)
+```markdown
+# Desafio DEV LEGALAI do Christian Dantas Oliveira
+
+Este projeto consiste em um sistema desenvolvido com **ASP.NET** e **ASP.NET Core**. A seguir, você encontrará as instruções necessárias para configurar o ambiente, rodar o banco de dados, compilar o projeto e utilizar o front-end.
+
+## Requisitos
+
+- **SQL Server**  
+- **ASP.NET**  
+- **ASP.NET Core**
 
 ## Passo a Passo
 
-### 1. Download e Configuração do SQL Server
-1. Baixe e instale o SQL Server a partir do site oficial da Microsoft.
-2. Durante a instalação, escolha a opção de autenticação do Windows.
+### 1. Instale e Configure o SQL Server
 
-### 2. Rote os Arquivos DDL e DML
-1. Localize a pasta `banco de dados` em seu projeto.
-2. Execute os scripts de DDL (Data Definition Language) e DML (Data Manipulation Language) para criar e popular as tabelas necessárias no banco de dados.
+- **Baixe o SQL Server**: Certifique-se de instalar a versão adequada para o seu ambiente.  
+- **Configuração de Autenticação**: Durante a instalação, configure o SQL Server para utilizar **autenticação Windows**.
 
-### 3. Atualização das Conexões
-Após configurar o banco de dados:
-1. Navegue até os arquivos de repositórios nos diretórios:
-   - `Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\backend\-Desafio_DEV_LEGALAI\-Desafio_DEV_LEGALAI\Repositores\EmpresaRepository`
-   - `Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\backend\-Desafio_DEV_LEGALAI\-Desafio_DEV_LEGALAI\Repositores\InteresseRepository`
-   - `Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\backend\-Desafio_DEV_LEGALAI\-Desafio_DEV_LEGALAI\Repositores\UsuarioRepository`
-   
-2. Localize a seguinte linha no arquivo:
-   ```csharp
-   private string stringConexao = "Data Source=DESKTOP-P4LGFHE;initial catalog=Desafio_Legal;integrated security=true";
-   ```
-3. Substitua `DESKTOP-P4LGFHE` pelo nome do seu computador ou o nome do servidor onde o banco de dados foi criado. Exemplo:
-   ```csharp
-   private string stringConexao = "Data Source=SEU_NOME_DE_COMPUTADOR;initial catalog=Desafio_Legal;integrated security=true";
-   ```
+### 2. Execute os Scripts SQL
 
-### 4. Compilação do Projeto
-1. Abra o arquivo `Program.cs` em seu ambiente de desenvolvimento.
-2. Compile o projeto para verificar se não há erros.
+- **Localize a Pasta "Banco de Dados"**: Dentro do repositório, identifique a pasta onde estão os arquivos DDL e DML.  
+- **Rode os Scripts**: 
+  - **DDL** (Data Definition Language): Executa os scripts para criar a estrutura do banco (tabelas, relacionamentos, etc.).
+  - **DML** (Data Manipulation Language): Executa os scripts para inserir os dados iniciais.
 
-### 5. Configuração do Frontend
-1. Navegue até o diretório que contém o arquivo `page1.html`.
-2. Abra `page1.html` em seu navegador e crie seu perfil conforme necessário.
+### 3. Configure a String de Conexão
 
-### 6. Visualização do Match
-1. Após completar seu perfil, abra `page2.html`.
-2. Aqui você poderá visualizar seu match com a empresa.
+- **Arquivos a Serem Editados**:  
+  Navegue até os seguintes arquivos:
+  - `Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\backend\-Desafio_DEV_LEGALAI\-Desafio_DEV_LEGALAI\Repositores\EmpresaRepository`
+  - `Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\backend\-Desafio_DEV_LEGALAI\-Desafio_DEV_LEGALAI\Repositores\InteresseRepository`
+  - `Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\backend\-Desafio_DEV_LEGALAI\-Desafio_DEV_LEGALAI\Repositores\UsuarioRepository`
 
-## Observações Finais
-- Certifique-se de que o SQL Server esteja rodando e que você tenha permissões adequadas para acessar o banco de dados.
-- Em caso de dúvidas ou problemas, consulte a documentação do ASP.NET ou entre em contato com a equipe de suporte.
+- **Altere a String de Conexão**:  
+  Em cada um desses arquivos, localize a linha 8 que contém:
 
-## Conclusão
-Com estas instruções, você deverá conseguir configurar e rodar o projeto sem dificuldades. Boa sorte e divirta-se desenvolvendo!
+  ```csharp
+  private string stringConexao = "Data Source=DESKTOP-P4LGFHE;initial catalog=Desafio_Legal;integrated security=true";
+  ```
 
---- 
+  Atualize o valor de `Data Source` para o nome do servidor onde você criou o banco de dados.  
+  **Exemplo**: Se você estiver rodando o banco localmente, substitua `DESKTOP-P4LGFHE` pelo nome do seu desktop.
 
-Se precisar de mais assistência ou tiver outras perguntas, fique à vontade para pedir!
+### 4. Compile o Projeto
+
+- Certifique-se de que o backend está funcionando corretamente.  
+- Compile o arquivo `program.cs` para validar todas as configurações e garantir que o projeto foi iniciado sem erros.
+
+### 5. Configure e Utilize o Front-End
+
+- **Abra o Arquivo `page1.html`**:  
+  Utilize este arquivo para acessar o formulário e fazer o seu perfil.
+
+- **Abra o Arquivo `page2.html`**:  
+  Após completar seu perfil, acesse `page2.html` para visualizar o seu match com a empresa, de acordo com os dados configurados no projeto.
+
+## Considerações Finais
+
+- **Tecnologias Utilizadas**: O projeto foi desenvolvido utilizando **ASP.NET** e **ASP.NET Core**.
+- **Sugestões de Melhoria**:  
+  - Integração com um banco de dados na nuvem, a fim de reduzir problemas que possam ocorrer com a compilação ou mudanças no ambiente local.
+  - Aperfeiçoamento da função de match entre usuários e empresas.
+- Caso você encontre dificuldades na compilação devido às versões dos frameworks ou configurações do ambiente local, disponibilizarei imagens ilustrativas do HTML em funcionamento.
+
+Agradeço pela atenção e espero que essa experiência seja enriquecedora. Se algo não estiver totalmente claro ou se surgirem dúvidas, por favor, sinta-se à vontade para entrar em contato!
+```
+
