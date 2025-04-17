@@ -1,8 +1,4 @@
-Segue abaixo um exemplo de **README.md** contendo as instruções pedidas:
 
----
-
-```markdown
 # Desafio DEV LEGALAI do Christian Dantas Oliveira
 
 Este projeto consiste em um sistema desenvolvido com **ASP.NET** e **ASP.NET Core**. A seguir, você encontrará as instruções necessárias para configurar o ambiente, rodar o banco de dados, compilar o projeto e utilizar o front-end.
