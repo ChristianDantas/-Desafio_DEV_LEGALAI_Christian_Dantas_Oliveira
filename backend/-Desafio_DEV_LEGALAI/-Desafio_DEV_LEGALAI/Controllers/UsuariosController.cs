@@ -36,5 +36,16 @@ namespace _Desafio_DEV_LEGALAI.Controllers
             _usuarioRepository.Cadastrar(novoUsuario);
             return StatusCode(201);
         }
+        [HttpGet("{id}")]
+        public IActionResult GetById(int id)
+        {
+            Domains.UsuarioDomain usuarioBuscado = _usuarioRepository.BuscarPorID(id);
+            if (usuarioBuscado == null)
+            {
+                return NotFound("Usuario não encontrado");
+            }
+            return Ok(usuarioBuscado);
+
+        }
     }
 }

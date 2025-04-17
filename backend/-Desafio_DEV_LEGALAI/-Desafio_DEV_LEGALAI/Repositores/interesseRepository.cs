@@ -17,7 +17,32 @@ namespace _Desafio_DEV_LEGALAI.Repositores
         /// </summary>
         private string stringConexao = "Data Source=DESKTOP-P4LGFHE;initial catalog=Desafio_Legal;integrated security=true";
 
-
+        public InteresseDomain BuscarPorID(int id)
+        {
+            using(SqlConnection con = new(stringConexao))
+            {
+                string querySelectById = "SELECT idInteresse, nomeInteresse FROM Interesse WHERE idInteresse = @ID";
+                con.Open();
+                using (SqlCommand cmd = new(querySelectById, con))
+                {
+                    cmd.Parameters.AddWithValue("@ID", id);
+                    SqlDataReader rdr = cmd.ExecuteReader();
+                    if (rdr.Read())
+                    {
+                        InteresseDomain interesseBuscado = new()
+                        {
+                            idInteresse = Convert.ToInt32(rdr["idInteresse"]),
+                            nomeInteresse = rdr["nomeInteresse"].ToString()
+                        };
+                        return interesseBuscado;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+            }
+        }
 
         public void Cadastrar(InteresseDomain novoInteresse)
         {

@@ -8,6 +8,6 @@
         public int idEmpresa { get; set; }
         public int idInteresse { get; set; }
         public string nomeEmpresa { get; set; }
-        public string Localização { get; set; }
+        public string Localizacao { get; set; }
     }
 }

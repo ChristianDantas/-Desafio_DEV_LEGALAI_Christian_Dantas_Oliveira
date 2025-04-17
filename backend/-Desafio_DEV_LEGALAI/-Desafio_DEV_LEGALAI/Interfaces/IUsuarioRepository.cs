@@ -10,9 +10,9 @@ namespace _Desafio_DEV_LEGALAI.Interfaces
         /// <returns>Lista de Usuario</returns>
         List<UsuarioDomain> ListarUsuario();
 
-
-
         void Cadastrar(UsuarioDomain novoUsuario);
+
+        UsuarioDomain BuscarPorID(int id);
 
     }
 }

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Envio de Usuário com Detalhes de Interesse</title>
+  <style>
+    /* Estilos básicos para centralizar o formulário */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 320px;
+      text-align: center;
+    }
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    button {
+      width: 100%;
+      background-color: #007BFF;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Formulário de usuário -->
+    <form id="myForm" action="page2.html" method="post">
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+      </div>
+      <div class="form-group">
+        <label for="interesse">Interesse</label>
+        <select id="interesse" name="interesse">
+          <option value="1">Tecnologias</option>
+          <option value="2">Jogos</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="localizacao">Localização</label>
+        <input type="text" id="localizacao" name="localizacao" placeholder="Digite sua localização" required>
+      </div>
+      <button type="submit">Submeter</button>
+    </form>
+  </div>
+
+  <script>
+    // Seleciona o formulário pelo ID
+    const form = document.getElementById('myForm');
+
+    form.addEventListener('submit', async function (event) {
+      event.preventDefault(); // Impede o comportamento padrão de envio do formulário
+
+      // Coleta os valores do formulário
+      const nome = document.getElementById('nome').value;
+      // Obtemos o id do interesse (como string) do select
+      const interesseId = document.getElementById('interesse').value;
+      const localizacao = document.getElementById('localizacao').value;
+
+      // Variável para armazenar os detalhes completos do interesse
+      let interestDetails = null;
+
+      // Busca os detalhes completos do interesse pelo id
+      try {
+        const resInteresse = await fetch(`http://localhost:5237/api/Interesses/${interesseId}`);
+        if (resInteresse.ok) {
+          // Converte a resposta para JSON
+          interestDetails = await resInteresse.json();
+        } else {
+          alert('Erro ao buscar os detalhes do interesse.');
+          console.error('Erro no GET do interesse:', resInteresse.statusText);
+          return; // Interrompe se não conseguir buscar os detalhes
+        }
+      } catch (error) {
+        console.error('Erro na requisição GET do interesse:', error);
+        alert('Ocorreu um erro ao buscar os detalhes do interesse.');
+        return;
+      }
+
+      // Constrói o payload combinando os dados do usuário e os detalhes do interesse
+      const payload = {
+        nomeUsuario: nome,
+        localizacao: localizacao,
+        // A propriedade 'interesse' inclui o id e os detalhes retornados
+        idInteresse : interesseId
+      };
+
+      // Envia os dados combinados para o endpoint de usuários
+      try {
+        const response = await fetch('http://localhost:5237/api/Usuarios', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if (response.ok) {
+          alert('Dados enviados com sucesso!');
+          // Se necessário, redirecione após sucesso:
+          // window.location.href = 'page2.html';
+        } else {
+          alert('Erro ao enviar dados. Tente novamente.');
+          console.error('Erro no POST:', response.statusText);
+        }
+      } catch (error) {
+        console.error('Erro na requisição POST:', error);
+        alert('Ocorreu um erro ao enviar os dados.');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -14,7 +14,8 @@ namespace _Desafio_DEV_LEGALAI.Interfaces
         List<InteresseDomain> ListarInteresse();
 
         void Cadastrar(InteresseDomain novoInteresse);
+        InteresseDomain BuscarPorID(int id);
 
-       
+
     }
 }

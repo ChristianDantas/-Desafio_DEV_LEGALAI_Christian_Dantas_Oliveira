@@ -37,5 +37,15 @@ namespace _Desafio_DEV_LEGALAI.Controllers
             _interesseRepository.Cadastrar(novoInteresse);
             return StatusCode(201);
         }
+        [HttpGet("{id}")]
+        public IActionResult GetById(int id)
+        {
+            InteresseDomain interesseBuscado = _interesseRepository.BuscarPorID(id);
+            if (interesseBuscado == null)
+            {
+                return NotFound("Interesse não encontrado");
+            }
+            return Ok(interesseBuscado);
+        }
     }
 }

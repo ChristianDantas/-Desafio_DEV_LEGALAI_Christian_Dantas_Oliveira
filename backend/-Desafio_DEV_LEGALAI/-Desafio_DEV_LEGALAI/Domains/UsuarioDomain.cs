@@ -8,6 +8,6 @@
         public int idUsuario { get; set; }
         public int idInteresse { get; set; }
         public string nomeUsuario { get; set; }
-        public string Localização { get; set; }
+        public string Localizacao { get; set; }
     }
 }

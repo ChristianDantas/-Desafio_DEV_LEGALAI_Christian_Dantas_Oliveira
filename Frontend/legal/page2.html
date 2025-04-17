@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empresas e Usuários Cadastrados</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #f5f5f5; }
+    .wrapper { max-width: 900px; margin: 0 auto; text-align: center; }
+    .cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .card { background-color: #fff; padding: 16px; width: 250px; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
+    .match { background-color: #e6f7ff; color: #007BFF; padding: 4px 8px; border-radius: 12px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Empresas e Usuários Cadastrados</h1>
+    <div class="cards" id="cards-container"></div>
+  </div>
+
+  <script>
+    async function fetchData() {
+      try {
+        const [usuariosRes, empresasRes] = await Promise.all([
+          fetch('http://localhost:5237/api/Usuarios').then(res => res.json()),
+          fetch('http://localhost:5237/api/Empresas').then(res => res.json())
+        ]);
+
+        const matches = [];
+        
+        empresasRes.forEach(empresa => {
+          usuariosRes.forEach(usuario => {
+            if (empresa.idInteresse === usuario.idInteresse) {
+              matches.push({ nome: empresa.nomeEmpresa, tipo: 'Empresa', localizacao: empresa.localizacao, interesse: empresa.idInteresse });
+              matches.push({ nome: usuario.nomeUsuario, tipo: 'Usuário', localizacao: usuario.localizacao, interesse: usuario.idInteresse });
+            }
+          });
+        });
+
+        const container = document.getElementById('cards-container');
+        matches.forEach(item => {
+          const card = document.createElement('div');
+          card.className = 'card';
+          card.innerHTML = `
+            <h2>${item.nome}</h2>
+            <p><strong>Tipo:</strong> ${item.tipo}</p>
+            <p><strong>Localização:</strong> ${item.localizacao}</p>
+            <p><strong>Interesse Mútuo:</strong> ${item.interesse}</p>
+            <div class="match">Match!</div>
+          `;
+          container.appendChild(card);
+        });
+
+      } catch (error) {
+        console.error('Erro ao buscar os dados', error);
+      }
+    }
+
+    fetchData();
+  </script>
+</body>
+</html>

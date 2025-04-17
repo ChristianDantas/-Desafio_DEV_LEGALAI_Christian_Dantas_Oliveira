@@ -36,5 +36,15 @@ namespace _Desafio_DEV_LEGALAI.Controllers
             _empresaRepository.Cadastrar(novaEmpresa);
             return StatusCode(201);
         }
+        [HttpGet("{id}")]
+        public IActionResult GetById(int id)
+        {
+            EmpresaDomain empresaBuscada = _empresaRepository.BuscarPorID(id);
+            if (empresaBuscada == null)
+            {
+                return NotFound("Empresa não encontrada");
+            }
+            return Ok(empresaBuscada);
+        }
     }
 }

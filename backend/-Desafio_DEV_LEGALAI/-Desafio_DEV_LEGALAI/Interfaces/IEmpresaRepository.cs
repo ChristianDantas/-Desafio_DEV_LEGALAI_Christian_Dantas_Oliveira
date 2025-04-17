@@ -10,9 +10,9 @@ namespace _Desafio_DEV_LEGALAI.Interfaces
         /// <returns>Lista de Empresas </returns>
         List<EmpresaDomain> ListarEmpresas();
 
-
-
         void Cadastrar(EmpresaDomain novoEmpresa);
+
+        EmpresaDomain BuscarPorID(int id);
 
     }
 }

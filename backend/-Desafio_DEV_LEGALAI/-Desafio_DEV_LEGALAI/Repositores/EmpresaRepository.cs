@@ -13,16 +13,48 @@ namespace _Desafio_DEV_LEGALAI.Repositores
         /// inntegrated security= true =faz a autenticação com o usuario do sistema
         /// </summary>
         private string stringConexao = "Data Source=DESKTOP-P4LGFHE;initial catalog=Desafio_Legal;integrated security=true";
+
+        public EmpresaDomain BuscarPorID(int id)
+        {
+           using(SqlConnection con = new(stringConexao))
+            {
+                string querySelectById = "SELECT idEmpresas, idInteresse, nomeEmpresa, Localizacao FROM Empresas WHERE idEmpresas = @id";
+                con.Open();
+                using (SqlCommand cmd = new(querySelectById, con))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    using (SqlDataReader rdr = cmd.ExecuteReader())
+                    {
+                        if (rdr.Read())
+                        {
+                            EmpresaDomain empresa = new()
+                            {
+                                idEmpresa = Convert.ToInt32(rdr[0]),
+                                idInteresse = Convert.ToInt32(rdr[1]),
+                                nomeEmpresa = rdr[2].ToString(),
+                                Localizacao = rdr[3].ToString()
+                            };
+                            return empresa;
+                        }
+                        else
+                        {
+                            return null;
+                        }
+                    }
+                }
+            }
+        }
+
         public void Cadastrar(EmpresaDomain novoEmpresa)
         {
             using (SqlConnection con = new(stringConexao))
             {
-                string queryInsert = "INSERT INTO Empresa (idInteresse, nomeEmpresa, Localização) VALUES (@idInteresse, @nomeEmpresa, @Localização)";
+                string queryInsert = "INSERT INTO Empresas (idInteresse, nomeEmpresas, Localizacao) VALUES (@idInteresse, @nomeEmpresa, @Localizacao)";
                 using (SqlCommand cmd = new(queryInsert, con))
                 {
                     cmd.Parameters.AddWithValue("@idInteresse", novoEmpresa.idInteresse);
                     cmd.Parameters.AddWithValue("@nomeEmpresa", novoEmpresa.nomeEmpresa);
-                    cmd.Parameters.AddWithValue("@Localização", novoEmpresa.Localização);
+                    cmd.Parameters.AddWithValue("@Localizacao", novoEmpresa.Localizacao);
                     con.Open();
                     cmd.ExecuteNonQuery();
                 }
@@ -35,7 +67,7 @@ namespace _Desafio_DEV_LEGALAI.Repositores
 
             using (SqlConnection con = new(stringConexao))
             {
-                string querySelectAll = "SELECT idEmpresa, idInteresse, nomeEmpresa, Localização FROM Empresa";
+                string querySelectAll = "SELECT idEmpresas, idInteresse, nomeEmpresa, Localizacao FROM Empresas";
                 con.Open();
                 using (SqlCommand cmd = new(querySelectAll, con))
                 {
@@ -48,7 +80,7 @@ namespace _Desafio_DEV_LEGALAI.Repositores
                                 idEmpresa = Convert.ToInt32(rdr[0]),
                                 idInteresse = Convert.ToInt32(rdr[1]),
                                 nomeEmpresa = rdr[2].ToString(),
-                                Localização = rdr[3].ToString()
+                                Localizacao = rdr[3].ToString()
                             };
                             listaEmpresas.Add(empresa);
                         }

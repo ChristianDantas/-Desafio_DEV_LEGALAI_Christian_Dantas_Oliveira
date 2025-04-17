@@ -14,16 +14,47 @@ namespace _Desafio_DEV_LEGALAI.Repositores
         /// </summary>
         private string stringConexao = "Data Source=DESKTOP-P4LGFHE;initial catalog=Desafio_Legal;integrated security=true";
 
+        public UsuarioDomain BuscarPorID(int id)
+        {
+            using(SqlConnection con = new(stringConexao))
+            {
+                string querySelectById = "SELECT idUsuario, idInteresse, nomeUsuario, Localizacao FROM Usuario WHERE idUsuario = @id";
+                con.Open();
+                using (SqlCommand cmd = new(querySelectById, con))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    using (SqlDataReader rdr = cmd.ExecuteReader())
+                    {
+                        if (rdr.Read())
+                        {
+                            UsuarioDomain usuario = new()
+                            {
+                                idUsuario = Convert.ToInt32(rdr[0]),
+                                idInteresse = Convert.ToInt32(rdr[1]),
+                                nomeUsuario = rdr[2].ToString(),
+                                Localizacao = rdr[3].ToString()
+                            };
+                            return usuario;
+                        }
+                        else
+                        {
+                            return null;
+                        }
+                    }
+                }
+            }
+        }
+
         public void Cadastrar(UsuarioDomain novoUsuario)
         {
             using (SqlConnection con = new(stringConexao))
             {
-                string queryInsert = "INSERT INTO Usuario (idInteresse, nomeUsuario, Localização) VALUES (@idInteresse, @nomeUsuario, @Localização)";
+                string queryInsert = "INSERT INTO Usuario (idInteresse, nomeUsuario, Localizacao) VALUES (@idInteresse, @nomeUsuario, @Localizacao)";
                 using (SqlCommand cmd = new(queryInsert, con))
                 {
                     cmd.Parameters.AddWithValue("@idInteresse", novoUsuario.idInteresse);
                     cmd.Parameters.AddWithValue("@nomeUsuario", novoUsuario.nomeUsuario);
-                    cmd.Parameters.AddWithValue("@Localização", novoUsuario.Localização);
+                    cmd.Parameters.AddWithValue("@Localizacao", novoUsuario.Localizacao);
                     con.Open();
                     cmd.ExecuteNonQuery();
                 }
@@ -35,7 +66,7 @@ namespace _Desafio_DEV_LEGALAI.Repositores
             using (SqlConnection con = new(stringConexao))
             {
                 List<UsuarioDomain> listaUsuario = new List<UsuarioDomain>();
-                string querySelectAll = "SELECT idUsuario, idInteresse, nomeUsuario, Localização FROM Usuario";
+                string querySelectAll = "SELECT idUsuario, idInteresse, nomeUsuario, Localizacao FROM Usuario";
                 con.Open();
                 using (SqlCommand cmd = new(querySelectAll, con))
                 {
@@ -48,7 +79,7 @@ namespace _Desafio_DEV_LEGALAI.Repositores
                                 idUsuario = Convert.ToInt32(rdr[0]),
                                 idInteresse = Convert.ToInt32(rdr[1]),
                                 nomeUsuario = rdr[2].ToString(),
-                                Localização = rdr[3].ToString()
+                                Localizacao = rdr[3].ToString()
                             };
                             listaUsuario.Add(usuario);
                         }
