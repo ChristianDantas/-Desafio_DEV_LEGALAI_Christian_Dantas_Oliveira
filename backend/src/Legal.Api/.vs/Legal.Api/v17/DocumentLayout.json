@@ -1,0 +1,109 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kiko-\\Desktop\\Api\\src\\Legal.Api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0015A9EA-5B2D-4B7F-9FCA-B75ED74D3D57}|Legal.Api\\Legal.Api.csproj|c:\\users\\kiko-\\desktop\\api\\src\\legal.api\\legal.api\\repositores\\empresarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0015A9EA-5B2D-4B7F-9FCA-B75ED74D3D57}|Legal.Api\\Legal.Api.csproj|solutionrelative:legal.api\\repositores\\empresarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0015A9EA-5B2D-4B7F-9FCA-B75ED74D3D57}|Legal.Api\\Legal.Api.csproj|c:\\users\\kiko-\\desktop\\api\\src\\legal.api\\legal.api\\repositores\\interesserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0015A9EA-5B2D-4B7F-9FCA-B75ED74D3D57}|Legal.Api\\Legal.Api.csproj|solutionrelative:legal.api\\repositores\\interesserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0015A9EA-5B2D-4B7F-9FCA-B75ED74D3D57}|Legal.Api\\Legal.Api.csproj|c:\\users\\kiko-\\desktop\\api\\src\\legal.api\\legal.api\\repositores\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0015A9EA-5B2D-4B7F-9FCA-B75ED74D3D57}|Legal.Api\\Legal.Api.csproj|solutionrelative:legal.api\\repositores\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0015A9EA-5B2D-4B7F-9FCA-B75ED74D3D57}|Legal.Api\\Legal.Api.csproj|c:\\users\\kiko-\\desktop\\api\\src\\legal.api\\legal.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0015A9EA-5B2D-4B7F-9FCA-B75ED74D3D57}|Legal.Api\\Legal.Api.csproj|solutionrelative:legal.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0015A9EA-5B2D-4B7F-9FCA-B75ED74D3D57}|Legal.Api\\Legal.Api.csproj|c:\\users\\kiko-\\desktop\\api\\src\\legal.api\\legal.api\\legal.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0015A9EA-5B2D-4B7F-9FCA-B75ED74D3D57}|Legal.Api\\Legal.Api.csproj|solutionrelative:legal.api\\legal.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\kiko-\\Desktop\\Api\\src\\Legal.Api\\Legal.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Legal.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\kiko-\\Desktop\\Api\\src\\Legal.Api\\Legal.Api\\Program.cs",
+              "RelativeToolTip": "Legal.Api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T21:33:04.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmpresaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kiko-\\Desktop\\Api\\src\\Legal.Api\\Legal.Api\\Repositores\\EmpresaRepository.cs",
+              "RelativeDocumentMoniker": "Legal.Api\\Repositores\\EmpresaRepository.cs",
+              "ToolTip": "C:\\Users\\kiko-\\Desktop\\Api\\src\\Legal.Api\\Legal.Api\\Repositores\\EmpresaRepository.cs",
+              "RelativeToolTip": "Legal.Api\\Repositores\\EmpresaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAACeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T21:32:31.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsuarioRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kiko-\\Desktop\\Api\\src\\Legal.Api\\Legal.Api\\Repositores\\UsuarioRepository.cs",
+              "RelativeDocumentMoniker": "Legal.Api\\Repositores\\UsuarioRepository.cs",
+              "ToolTip": "C:\\Users\\kiko-\\Desktop\\Api\\src\\Legal.Api\\Legal.Api\\Repositores\\UsuarioRepository.cs",
+              "RelativeToolTip": "Legal.Api\\Repositores\\UsuarioRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAEwA4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T21:32:17.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "interesseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kiko-\\Desktop\\Api\\src\\Legal.Api\\Legal.Api\\Repositores\\interesseRepository.cs",
+              "RelativeDocumentMoniker": "Legal.Api\\Repositores\\interesseRepository.cs",
+              "ToolTip": "C:\\Users\\kiko-\\Desktop\\Api\\src\\Legal.Api\\Legal.Api\\Repositores\\interesseRepository.cs",
+              "RelativeToolTip": "Legal.Api\\Repositores\\interesseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAACeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T21:30:59.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Legal.Api",
+              "DocumentMoniker": "C:\\Users\\kiko-\\Desktop\\Api\\src\\Legal.Api\\Legal.Api\\Legal.Api.csproj",
+              "RelativeDocumentMoniker": "Legal.Api\\Legal.Api.csproj",
+              "ToolTip": "C:\\Users\\kiko-\\Desktop\\Api\\src\\Legal.Api\\Legal.Api\\Legal.Api.csproj",
+              "RelativeToolTip": "Legal.Api\\Legal.Api.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-17T21:15:53.02Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

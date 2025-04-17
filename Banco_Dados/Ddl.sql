@@ -1,4 +1,4 @@
---Create database Desafio_Legal
+Create database Desafio_Legal
 GO
 
 USE Desafio_Legal
