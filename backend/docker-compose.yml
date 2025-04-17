@@ -1,6 +1,6 @@
 version: "3.7"
 
-Services:
+services:
     api_legal_render:
         container_name: api_legal_render
         build:
