@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "ContainingType": "_Desafio_DEV_LEGALAI.Controllers.InteressesController",
+    "Method": "Get",
+    "RelativePath": "api/Interesses",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
