@@ -15,7 +15,7 @@ WORKDIR /src
 COPY ["./src/Legal.Api/Legal.Api/Legal.Api.csproj", "Legal.Api/Legal.Api/"]
 RUN dotnet restore "./Legal.Api/Legal.Api.csproj"
 COPY . .
-#WORKDIR "/src/Legal.Api"
+WORKDIR "/src/Legal.Api"
 RUN dotnet build "src/Legal.Api/Legal.Api/Legal.Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # Esta fase é usada para publicar o projeto de serviço a ser copiado para a fase final
