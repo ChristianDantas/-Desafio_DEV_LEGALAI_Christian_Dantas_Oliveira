@@ -156,7 +156,6 @@ C:\Users\kiko-\Desktop\Desafio_legal\-Desafio_DEV_LEGALAI_Christian_Dantas_Olive
 C:\Users\kiko-\Desktop\Desafio_legal\-Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\backend\src\Legal.Api\Legal.Api\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.Legal.Api.props
 C:\Users\kiko-\Desktop\Desafio_legal\-Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\backend\src\Legal.Api\Legal.Api\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.Legal.Api.props
 C:\Users\kiko-\Desktop\Desafio_legal\-Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\backend\src\Legal.Api\Legal.Api\obj\Debug\net9.0\staticwebassets.pack.json
-C:\Users\kiko-\Desktop\Desafio_legal\-Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\backend\src\Legal.Api\Legal.Api\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\kiko-\Desktop\Desafio_legal\-Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\backend\src\Legal.Api\Legal.Api\obj\Debug\net9.0\Legal.Api.csproj.Up2Date
 C:\Users\kiko-\Desktop\Desafio_legal\-Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\backend\src\Legal.Api\Legal.Api\obj\Debug\net9.0\Legal.Api.dll
 C:\Users\kiko-\Desktop\Desafio_legal\-Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\backend\src\Legal.Api\Legal.Api\obj\Debug\net9.0\refint\Legal.Api.dll
