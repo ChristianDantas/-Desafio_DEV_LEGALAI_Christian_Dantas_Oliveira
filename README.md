@@ -1,66 +1,77 @@
 
-# Desafio DEV LEGALAI do Christian Dantas Oliveira
+# Desafio DEV LEGAL AI - Christian Dantas Oliveira
 
-Este projeto consiste em um sistema desenvolvido com **ASP.NET** e **ASP.NET Core**. A seguir, você encontrará as instruções necessárias para configurar o ambiente, rodar o banco de dados, compilar o projeto e utilizar o front-end.
+## Funcionalidades
 
-## Requisitos
+- Consumo dos dados dos endpoints de **Usuários** e **Empresas**.
+- Agrupamento dos cards de acordo com o interesse.
+- Definição de “match” quando há pelo menos uma Empresa e um Usuário dentro do mesmo grupo.
+- Geração de uma porcentagem que varia conforme o status de match.
 
-- **SQL Server**  
-- **ASP.NET**  
-- **ASP.NET Core**
+## Pré-requisitos
 
-## Passo a Passo
+- [.NET SDK](https://dotnet.microsoft.com/download) (versão compatível com o projeto)
 
-### 1. Instale e Configure o SQL Server
+## Instalação
 
-- **Baixe o SQL Server**: Certifique-se de instalar a versão adequada para o seu ambiente.  
-- **Configuração de Autenticação**: Durante a instalação, configure o SQL Server para utilizar **autenticação Windows**.
+1. **Clone o Repositório**
 
-### 2. Execute os Scripts SQL
+   Abra o terminal e execute:
+   ```bash
+   git clone https://github.com/ChristianDantas/-Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira.git
+   ```
 
-- **Localize a Pasta "Banco de Dados"**: Dentro do repositório, identifique a pasta onde estão os arquivos DDL e DML.  
-- **Rode os Scripts**: 
-  - **DDL** (Data Definition Language): Executa os scripts para criar a estrutura do banco (tabelas, relacionamentos, etc.).
-  - **DML** (Data Manipulation Language): Executa os scripts para inserir os dados iniciais.
+2. **Navegue até a Pasta do Projeto**
+   ```bash
+   cd -Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira
+   ```
 
-### 3. Configure a String de Conexão
+## Execução
 
-- **Arquivos a Serem Editados**:  
-  Navegue até os seguintes arquivos:
-  - `Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\backend\-Desafio_DEV_LEGALAI\-Desafio_DEV_LEGALAI\Repositores\EmpresaRepository`
-  - `Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\backend\-Desafio_DEV_LEGALAI\-Desafio_DEV_LEGALAI\Repositores\InteresseRepository`
-  - `Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\backend\-Desafio_DEV_LEGALAI\-Desafio_DEV_LEGALAI\Repositores\UsuarioRepository`
+Para compilar e executar seu aplicativo, siga os passos abaixo:
 
-- **Altere a String de Conexão**:  
-  Em cada um desses arquivos, localize a linha 8 que contém:
+1. **Abra o Terminal** na pasta onde se encontra o arquivo de projeto (o arquivo `.csproj`).
+2. **Execute o Projeto**  
+   Utilize o comando:
+   ```bash
+   dotnet run
+   ```
+   O programa irá compilar (se necessário) e rodar, iniciando o código presente em `Program.cs` que fará as chamadas às APIs de Usuários e Empresas, agrupará os dados pelos interesses e exibirá os cards agrupados conforme o status de match.
 
-  ```csharp
-  private string stringConexao = "Data Source=DESKTOP-P4LGFHE;initial catalog=Desafio_Legal;integrated security=true";
-  ```
+## Estrutura do Projeto
 
-  Atualize o valor de `Data Source` para o nome do servidor onde você criou o banco de dados.  
-  **Exemplo**: Se você estiver rodando o banco localmente, substitua `DESKTOP-P4LGFHE` pelo nome do seu desktop.
+- **Program.cs**  
+  Ponto de entrada da aplicação onde é executada a lógica principal (consumo de APIs, agrupamento e renderização dos cards).
 
-### 4. Compile o Projeto
+- **Outros diretórios e arquivos**  
+  Organize os demais arquivos conforme necessário. Este repositório serve como base para o desafio DEV LEGAL AI.
 
-- Certifique-se de que o backend está funcionando corretamente.  
-- Compile o arquivo `program.cs` para validar todas as configurações e garantir que o projeto foi iniciado sem erros.
+## Contribuição
 
-### 5. Configure e Utilize o Front-End
+Contribuições são bem-vindas! Para contribuir:
 
-- **Abra o Arquivo `page1.html`**:  
-  Utilize este arquivo para acessar o formulário e fazer o seu perfil.
+1. Faça um fork do repositório.
+2. Crie uma nova branch:
+   ```bash
+   git checkout -b minha-feature
+   ```
+3. Faça suas modificações e em seguida commit:
+   ```bash
+   git commit -m "Descrição da nova feature"
+   ```
+4. Envie para sua branch:
+   ```bash
+   git push origin minha-feature
+   ```
+5. Abra um Pull Request para o repositório original.
 
-- **Abra o Arquivo `page2.html`**:  
-  Após completar seu perfil, acesse `page2.html` para visualizar o seu match com a empresa, de acordo com os dados configurados no projeto.
+## Licença
 
-## Considerações Finais
+Este projeto está licenciado sob a [Licença MIT](LICENSE).
 
-- **Tecnologias Utilizadas**: O projeto foi desenvolvido utilizando **ASP.NET** e **ASP.NET Core**.
-- **Sugestões de Melhoria**:  
-  - Integração com um banco de dados na nuvem, a fim de reduzir problemas que possam ocorrer com a compilação ou mudanças no ambiente local.
-  - Aperfeiçoamento da função de match entre usuários e empresas.
-- Caso você encontre dificuldades na compilação devido às versões dos frameworks ou configurações do ambiente local, disponibilizarei imagens ilustrativas do HTML em funcionamento.
+## Contato
 
-Agradeço pela atenção e espero que essa experiência seja enriquecedora. Se algo não estiver totalmente claro ou se surgirem dúvidas, por favor, sinta-se à vontade para entrar em contato!
+Para dúvidas, sugestões ou contribuições, entre em contato por meio do GitHub ou envie um e-mail para [Christian_d_ol9000@hotmail.com](mailto:Christian_d_ol9000@hotmail.com).
 ```
+
+Este README.md pode ser adicionado ao repositório para orientar desenvolvedores a instalar, executar e contribuir com o projeto.
