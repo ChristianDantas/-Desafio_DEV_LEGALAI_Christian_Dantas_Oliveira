@@ -5,50 +5,215 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Empresas e Usuários Cadastrados</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 20px; background-color: #f5f5f5; }
-    .wrapper { max-width: 900px; margin: 0 auto; text-align: center; }
-    .cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-    .card { background-color: #fff; padding: 16px; width: 250px; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
-    .match { background-color: #e6f7ff; color: #007BFF; padding: 4px 8px; border-radius: 12px; font-weight: bold; }
+    /* Estilos gerais */
+    body { 
+      font-family: Arial, sans-serif; 
+      padding: 20px; 
+      background-color: #f5f5f5; 
+    }
+    
+    /* Cabeçalho com logo */
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    header img.logo { 
+      width: 200px; 
+      height: auto; 
+    }
+    header p { 
+      margin: 8px 0;
+      font-size: 1em;
+      color: #555; 
+    }
+    
+    /* Container principal */
+    .wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    /* Cada grupo de interesse */
+    .section {
+      margin-bottom: 40px;
+    }
+    .section-header {
+      background-color: #007BFF;
+      color: #fff;
+      padding: 8px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      text-align: left;
+    }
+    
+    /* Estilo dos cards */
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .card {
+      background-color: #fff;
+      padding: 16px;
+      width: 250px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    
+    /* Status dos cards */
+    .match {
+      background-color: #e6f7ff;
+      color: #007BFF;
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+    .no-match {
+      background-color: #ffcccc;
+      color: #a00;
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-weight: bold;
+      margin-top: 8px;
+    }
   </style>
 </head>
 <body>
+  <header>
+    <!-- Atualize o src da logo conforme necessário -->
+    <img src="https://operadora.legal/wp-content/uploads/2023/07/Logo-Legal.png.webp" alt="Operadora Legal Logo" class="logo">
+  </header>
+
   <div class="wrapper">
-    <h1>Empresas e Usuários Cadastrados</h1>
-    <div class="cards" id="cards-container"></div>
+    <h1>Veja Seus Matchs:</h1>
+    <div id="cards-container"></div>
   </div>
 
   <script>
     async function fetchData() {
       try {
+        // Faz as requisições para a API de Usuários e Empresas.
         const [usuariosRes, empresasRes] = await Promise.all([
           fetch('http://localhost:5274/api/Usuarios').then(res => res.json()),
           fetch('http://localhost:5274/api/Empresas').then(res => res.json())
         ]);
-
-        const matches = [];
         
+        // Mapeamento mockado dos interesses:
+        // idInteresse 1 corresponde a "Tecnologias"
+        // idInteresse 2 corresponde a "Jogos"
+        const interessesMap = {
+          1: "Tecnologias",
+          2: "Jogos"
+        };
+
+        // Cria um array combinando empresas e usuários.
+        const cards = [];
+
         empresasRes.forEach(empresa => {
-          usuariosRes.forEach(usuario => {
-            if (empresa.idInteresse === usuario.idInteresse) {
-              matches.push({ nome: empresa.nomeEmpresa, tipo: 'Empresa', localizacao: empresa.localizacao, interesse: empresa.idInteresse });
-              matches.push({ nome: usuario.nomeUsuario, tipo: 'Usuário', localizacao: usuario.localizacao, interesse: usuario.idInteresse });
-            }
+          let interestId;
+          // Se idInteresse for um objeto, extraímos seu id; senão, usamos o valor direto.
+          if (typeof empresa.idInteresse === 'object' && empresa.idInteresse !== null) {
+            interestId = empresa.idInteresse.id;
+          } else {
+            interestId = empresa.idInteresse;
+          }
+          cards.push({
+            nome: empresa.nomeEmpresa,
+            tipo: 'Empresa',
+            localizacao: empresa.localizacao,
+            interestId: interestId
           });
         });
 
+        usuariosRes.forEach(usuario => {
+          let interestId;
+          if (typeof usuario.idInteresse === 'object' && usuario.idInteresse !== null) {
+            interestId = usuario.idInteresse.id;
+          } else {
+            interestId = usuario.idInteresse;
+          }
+          cards.push({
+            nome: usuario.nomeUsuario,
+            tipo: 'Usuário',
+            localizacao: usuario.localizacao,
+            interestId: interestId
+          });
+        });
+
+        // Agrupa os cards por interesse (usando a propriedade interestId).
+        const grupos = {};
+        cards.forEach(card => {
+          if (!grupos[card.interestId]) {
+            grupos[card.interestId] = [];
+          }
+          grupos[card.interestId].push(card);
+        });
+
+        // Função que gera uma porcentagem mockada com base no status do match.
+        function gerarPorcentagem(isMatch) {
+          if (isMatch) {
+            // Se houver match (ao menos uma Empresa e um Usuário), gera entre 70% e 100%.
+            return Math.floor(Math.random() * 31) + 70 + '%';
+          } else {
+            // Caso contrário, gera entre 0% e 60%.
+            return Math.floor(Math.random() * 61) + '%';
+          }
+        }
+
+        // Determina o status de match para cada grupo.
+        Object.values(grupos).forEach(grupo => {
+          const hasEmpresa = grupo.some(item => item.tipo === 'Empresa');
+          const hasUsuario = grupo.some(item => item.tipo === 'Usuário');
+          const isMatch = hasEmpresa && hasUsuario;
+          grupo.forEach(item => {
+            item.isMatch = isMatch;
+            item.porcentagem = gerarPorcentagem(isMatch);
+          });
+        });
+
+        // Renderiza os grupos em seções separadas.
         const container = document.getElementById('cards-container');
-        matches.forEach(item => {
-          const card = document.createElement('div');
-          card.className = 'card';
-          card.innerHTML = `
-            <h2>${item.nome}</h2>
-            <p><strong>Tipo:</strong> ${item.tipo}</p>
-            <p><strong>Localização:</strong> ${item.localizacao}</p>
-            <p><strong>Interesse Mútuo:</strong> ${item.interesse}</p>
-            <div class="match">Match!</div>
-          `;
-          container.appendChild(card);
+        container.innerHTML = ''; // Limpa o container
+
+        Object.keys(grupos).forEach(interestId => {
+          const grupo = grupos[interestId];
+          // Obtém o nome do interesse a partir do mapa mockado.
+          const interestName = interessesMap[interestId] || 'Desconhecido';
+
+          // Cria a seção para este grupo.
+          const section = document.createElement('div');
+          section.className = 'section';
+          
+          // Cabeçalho da seção exibindo o nome do interesse.
+          const header = document.createElement('div');
+          header.className = 'section-header';
+          header.innerText = `Interesse: ${interestName}`;
+          section.appendChild(header);
+
+          // Container para os cards deste grupo.
+          const cardsDiv = document.createElement('div');
+          cardsDiv.className = 'cards';
+
+          grupo.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            const statusText = item.isMatch ? 'Match!' : 'Interesse Diferente';
+            const statusClass = item.isMatch ? 'match' : 'no-match';
+            card.innerHTML = `
+              <h2>${item.nome}</h2>
+              <p><strong>Tipo:</strong> ${item.tipo}</p>
+              <p><strong>Localização:</strong> ${item.localizacao}</p>
+              <p><strong>Porcentagem:</strong> ${item.porcentagem}</p>
+              <div class="${statusClass}">${statusText}</div>
+            `;
+            cardsDiv.appendChild(card);
+          });
+
+          section.appendChild(cardsDiv);
+          container.appendChild(section);
         });
 
       } catch (error) {

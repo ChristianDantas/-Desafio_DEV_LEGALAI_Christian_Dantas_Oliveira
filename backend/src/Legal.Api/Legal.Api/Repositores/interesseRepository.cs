@@ -15,7 +15,7 @@ namespace _Desafio_DEV_LEGALAI.Repositores
         /// Initial Catalog = nome do banco de dados
         /// inntegrated security= true =faz a autenticação com o usuario do sistema
         /// </summary>
-        private string stringConexao = "Data Source=sql2.cajmkci64qst.us-east-1.rds.amazonaws.com;initial catalog=Desafio_Legal; user Id=admin; pwd=12345678";
+        private string stringConexao = "Data Source=sqlserver.c1agskouw8ei.sa-east-1.rds.amazonaws.com;initial catalog=Desafio_Legal; user Id=admin; pwd=12345678";
 
         public InteresseDomain BuscarPorID(int id)
         {
