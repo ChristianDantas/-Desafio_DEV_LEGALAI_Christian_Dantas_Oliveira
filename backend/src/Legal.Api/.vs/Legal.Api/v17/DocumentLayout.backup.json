@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\kiko-\\Desktop\\Desafio_legal\\-Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\\backend\\src\\Legal.Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0015A9EA-5B2D-4B7F-9FCA-B75ED74D3D57}|Legal.Api\\Legal.Api.csproj|c:\\users\\kiko-\\desktop\\desafio_legal\\-desafio_dev_legalai_christian_dantas_oliveira\\backend\\src\\legal.api\\legal.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{0015A9EA-5B2D-4B7F-9FCA-B75ED74D3D57}|Legal.Api\\Legal.Api.csproj|solutionrelative:legal.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{0015A9EA-5B2D-4B7F-9FCA-B75ED74D3D57}|Legal.Api\\Legal.Api.csproj|c:\\users\\kiko-\\desktop\\desafio_legal\\-desafio_dev_legalai_christian_dantas_oliveira\\backend\\src\\legal.api\\legal.api\\repositores\\interesserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0015A9EA-5B2D-4B7F-9FCA-B75ED74D3D57}|Legal.Api\\Legal.Api.csproj|solutionrelative:legal.api\\repositores\\interesserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0015A9EA-5B2D-4B7F-9FCA-B75ED74D3D57}|Legal.Api\\Legal.Api.csproj|c:\\users\\kiko-\\desktop\\desafio_legal\\-desafio_dev_legalai_christian_dantas_oliveira\\backend\\src\\legal.api\\legal.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -24,10 +24,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0015A9EA-5B2D-4B7F-9FCA-B75ED74D3D57}|Legal.Api\\Legal.Api.csproj|c:\\users\\kiko-\\desktop\\desafio_legal\\-desafio_dev_legalai_christian_dantas_oliveira\\backend\\src\\legal.api\\legal.api\\repositores\\empresarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0015A9EA-5B2D-4B7F-9FCA-B75ED74D3D57}|Legal.Api\\Legal.Api.csproj|solutionrelative:legal.api\\repositores\\empresarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0015A9EA-5B2D-4B7F-9FCA-B75ED74D3D57}|Legal.Api\\Legal.Api.csproj|c:\\users\\kiko-\\desktop\\desafio_legal\\-desafio_dev_legalai_christian_dantas_oliveira\\backend\\src\\legal.api\\legal.api\\repositores\\interesserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0015A9EA-5B2D-4B7F-9FCA-B75ED74D3D57}|Legal.Api\\Legal.Api.csproj|solutionrelative:legal.api\\repositores\\interesserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -37,24 +33,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Users\\kiko-\\Desktop\\Desafio_legal\\-Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\\backend\\src\\Legal.Api\\Legal.Api\\Dockerfile",
-              "RelativeDocumentMoniker": "Legal.Api\\Dockerfile",
-              "ToolTip": "C:\\Users\\kiko-\\Desktop\\Desafio_legal\\-Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\\backend\\src\\Legal.Api\\Legal.Api\\Dockerfile",
-              "RelativeToolTip": "Legal.Api\\Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-04-17T22:36:32.035Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -78,8 +61,7 @@
               "RelativeToolTip": "Legal.Api\\Program.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAIwBgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T21:33:04.587Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T21:33:04.587Z"
             },
             {
               "$type": "Document",
@@ -103,20 +85,20 @@
               "RelativeToolTip": "Legal.Api\\Repositores\\UsuarioRepository.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T21:32:17.027Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T21:32:17.027Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "interesseRepository.cs",
               "DocumentMoniker": "C:\\Users\\kiko-\\Desktop\\Desafio_legal\\-Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\\backend\\src\\Legal.Api\\Legal.Api\\Repositores\\interesseRepository.cs",
               "RelativeDocumentMoniker": "Legal.Api\\Repositores\\interesseRepository.cs",
               "ToolTip": "C:\\Users\\kiko-\\Desktop\\Desafio_legal\\-Desafio_DEV_LEGALAI_Christian_Dantas_Oliveira\\backend\\src\\Legal.Api\\Legal.Api\\Repositores\\interesseRepository.cs",
               "RelativeToolTip": "Legal.Api\\Repositores\\interesseRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAACeAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAowBgAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T21:30:59.198Z"
+              "WhenOpened": "2025-04-17T21:30:59.198Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
