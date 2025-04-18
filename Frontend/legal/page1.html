@@ -95,7 +95,7 @@
 
       // Busca os detalhes completos do interesse pelo id
       try {
-        const resInteresse = await fetch(`http://localhost:5237/api/Interesses/${interesseId}`);
+        const resInteresse = await fetch(`http://localhost:5274/api/Interesses/${interesseId}`);
         if (resInteresse.ok) {
           // Converte a resposta para JSON
           interestDetails = await resInteresse.json();
@@ -120,7 +120,7 @@
 
       // Envia os dados combinados para o endpoint de usuários
       try {
-        const response = await fetch('http://localhost:5237/api/Usuarios', {
+        const response = await fetch('http://localhost:5274/api/Usuarios', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -130,6 +130,7 @@
 
         if (response.ok) {
           alert('Dados enviados com sucesso!');
+          window.location.href = 'page2.html';
           // Se necessário, redirecione após sucesso:
           // window.location.href = 'page2.html';
         } else {

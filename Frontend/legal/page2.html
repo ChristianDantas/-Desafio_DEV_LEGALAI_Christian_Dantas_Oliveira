@@ -22,8 +22,8 @@
     async function fetchData() {
       try {
         const [usuariosRes, empresasRes] = await Promise.all([
-          fetch('http://localhost:5237/api/Usuarios').then(res => res.json()),
-          fetch('http://localhost:5237/api/Empresas').then(res => res.json())
+          fetch('http://localhost:5274/api/Usuarios').then(res => res.json()),
+          fetch('http://localhost:5274/api/Empresas').then(res => res.json())
         ]);
 
         const matches = [];

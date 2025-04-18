@@ -11,7 +11,7 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["./Legal.Api.csproj", "Legal.Api/"]
+COPY ["Legal.Api/Legal.Api.csproj", "Legal.Api/"]
 VOLUME ["./Legal.Api.csproj"]
 RUN dotnet restore "./Legal.Api/Legal.Api.csproj"
 COPY . .
